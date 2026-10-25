@@ -1,0 +1,26 @@
+{
+  "skill": "reactive-resume",
+  "description_under_test": "隐私优先的中文求职套件（灵感来自开源项目 reactive-resume）：结构化简历创建与优化、ATS 检查、求职信撰写、投递跟踪看板、JD 匹配分析、面试准备与复盘、Offer 比较。当用户提到简历、求职信、ATS、投递管理、面试准备、面试复盘、Offer 选择，或说\"帮我改简历\"\"跳槽准备\"\"找工作\"\"这个 JD 我匹配吗\"\"帮我准备面试\"时使用本技能——即使用户没有明说\"简历\"二字，只要意图落在求职材料或求职管理上，就应触发。",
+  "queries": [
+    { "id": 1, "query": "帮我写一份简历", "should_trigger": true },
+    { "id": 2, "query": "我想投字节的前端岗位，帮我看看我的简历匹不匹配", "should_trigger": true },
+    { "id": 3, "query": "帮我写一封求职信", "should_trigger": true },
+    { "id": 4, "query": "我投了 5 家公司了，帮我做个投递进度看板", "should_trigger": true },
+    { "id": 5, "query": "下周二要去面试，帮我准备一下", "should_trigger": true },
+    { "id": 6, "query": "面试挂了，帮我复盘一下哪里没答好", "should_trigger": true },
+    { "id": 7, "query": "拿到两个 offer，帮我比较一下哪个好", "should_trigger": true },
+    { "id": 8, "query": "我要跳槽，简历该怎么改", "should_trigger": true },
+    { "id": 9, "query": "这个岗位 JD 要求 5 年经验，我够不够格", "should_trigger": true },
+    { "id": 10, "query": "帮我过一遍简历的 ATS 检查", "should_trigger": true },
+    { "id": 11, "query": "我想找工作，不知道从哪开始准备", "should_trigger": true },
+    { "id": 12, "query": "面试时我应该反问面试官什么问题", "should_trigger": true },
+    { "id": 13, "query": "帮我写一份公司年度总结 PPT", "should_trigger": false },
+    { "id": 14, "query": "帮我优化这个产品说明书的排版", "should_trigger": false },
+    { "id": 15, "query": "写一封给客户的道歉邮件", "should_trigger": false },
+    { "id": 16, "query": "帮我做一份孩子幼儿园家长会发言稿", "should_trigger": false },
+    { "id": 17, "query": "把这封英文邮件翻译成中文", "should_trigger": false },
+    { "id": 18, "query": "帮我写个情人节给女朋友的小作文", "should_trigger": false },
+    { "id": 19, "query": "帮我校对一下这篇论文的格式", "should_trigger": false },
+    { "id": 20, "query": "我想开个公众号，帮我想几个选题", "should_trigger": false }
+  ]
+}

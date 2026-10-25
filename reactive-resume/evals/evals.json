@@ -1,0 +1,47 @@
+{
+  "skill_name": "reactive-resume",
+  "evals": [
+    {
+      "id": 1,
+      "name": "fresh-build",
+      "prompt": "我毕业三年了，一直在一家电商公司做前端。最早用 Vue2 写管理后台，去年开始带 3 个人做小程序商城和 H5 活动页，小程序现在日活大概 50 万。技术栈主要是 Vue2/Vue3、小程序、也接触过一点 React。学历是本科，计算机专业。现在想跳槽去大厂，你帮我做一份简历吧。",
+      "expected_output": "通过访谈式采集（而非直接甩一份模板简历）→ 创建 reactive-resume/resume.json（符合 resume-schema）→ validate_resume.py 校验零错误 → 渲染 Markdown → ATS 扫描/建议。不编造用户未提供的数字、公司名、时间。",
+      "files": [],
+      "expectations": [
+        "产出 reactive-resume/resume.json，且为合法 JSON、符合 resume-schema.md 的字段结构",
+        "resume.json 通过 scripts/validate_resume.py validate，零错误",
+        "使用 scripts/validate_resume.py 渲染出 Markdown 简历稿",
+        "给出 ATS 相关检查或建议（扫描结果或 ats-guide 清单）",
+        "简历内容只包含用户提供的事实（电商公司前端、Vue2 管理后台、带 3 人、小程序商城/H5、DAU 50 万、本科计算机），未出现编造的数字或公司名"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "jd-fit-optimize",
+      "prompt": "我想投这个岗位：高级前端工程师。岗位要求：1. 5 年以上前端开发经验，精通 React 及生态，熟悉 TypeScript；2. 有大型 C 端产品性能优化经验，能主导性能专项；3. 熟悉前端工程化，有 Monorepo、CI/CD 实践经验；4. 具备跨团队推动能力，有带人经验优先。\n\n我现在的简历大概是这样：某电商公司前端，3 年经验。负责公司管理后台的开发和维护，用 Vue2。后来做了小程序商城，带 3 个人。小程序日活 50 万。熟悉 Vue2/Vue3、小程序，了解 React。本科计算机。帮我看看差距在哪，怎么改？",
+      "expected_output": "先做 JD 匹配分析（每条要求标注 具备/部分/缺失 + 证据，无证据进待确认，不编造）→ 给出具体改写前后对照（职责式 → 成就式 + 量化）→ 关键词/ATS 策略 → 修改后的简历稿并通过校验。",
+      "files": [],
+      "expectations": [
+        "输出 JD 要求拆解清单，覆盖 React/TS、C 端性能优化、工程化、跨团队/带人 四类要求",
+        "每条要求标注 具备/部分/缺失 三态之一，并附简历证据或列入待确认",
+        "未把用户没有的经历写成有（用户是 Vue 为主、React 仅了解，不得写成精通）",
+        "给出至少一处具体的改写前后对照（before/after）",
+        "涉及 ATS 关键词策略：指出 JD 关键词需在简历中字面出现"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "tracker-and-briefing",
+      "prompt": "我这两天投了四家公司：字节、腾讯、阿里、美团，都是前端岗，腾讯是内推，其他是官网投的。腾讯约了下周三的一面。你帮我把这些投递记下来整理个看板，再帮我准备下周腾讯那场面试。",
+      "expected_output": "创建 reactive-resume/career.json（职业档案 + 4 条投递记录，阶段/日期/渠道完整）→ 输出按阶段分组的看板 + 跟进提醒 → 面试 briefing：问题清单、3 分钟开场白、反问问题、时间盒计划。未面试公司具体信息用待确认处理，不编造。",
+      "files": [],
+      "expectations": [
+        "创建 reactive-resume/career.json，含 4 条投递记录（字节/腾讯/阿里/美团，均前端岗，腾讯渠道为内推）",
+        "腾讯投递的阶段体现「已约面/面试中」并设置了下一步与截止日期",
+        "输出按阶段分组的投递看板（表格或分组列表）",
+        "面试准备包含四要素：高频问题清单、3 分钟开场白、要反问的问题、时间盒计划",
+        "career.json 通过 scripts/validate_resume.py validate，无错误"
+      ]
+    }
+  ]
+}
